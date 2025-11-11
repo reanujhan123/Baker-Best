@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style scoped>
+    /* Spotlight Animation */
+    .animate-spotlight {
+      animation: spotlight-anim ease-in-out v-bind(durationInSeconds) forwards;
+      animation-delay: v-bind(delayInSeconds);
+    }
+
+    /* Glowing Line Animation */
+    .animate-glowing-line {
+      animation: glowing-line-anim ease-in-out v-bind(durationInSeconds) forwards;
+      animation-delay: v-bind(delayInSeconds);
+    }
+
+    /* Conic Gradient Animation */
+    .animate-conic-gradient {
+      animation: conic-gradient-anim ease-in-out v-bind(durationInSeconds) forwards;
+      animation-delay: v-bind(delayInSeconds);
+    }
+
+    /* Keyframes for Spotlight */
+    @keyframes spotlight-anim {
+      from {
+        width: 8rem;
+      }
+
+      to {
+        width: 16rem;
+      }
+    }
+
+    /* Keyframes for Glowing Line */
+    @keyframes glowing-line-anim {
+      from {
+        width: 15rem;
+      }
+
+      to {
+        width: 30rem;
+      }
+    }
+
+    /* Keyframes for Conic Gradient */
+    @keyframes conic-gradient-anim {
+      from {
+        opacity: 0.5;
+        width: 15rem;
+      }
+
+      to {
+        opacity: 1;
+        width: 30rem;
+      }
+    }
+  </style>
+<link rel="js" href="bakerbest.js">
+</head>
+
+<body>
+  <template>
+    <div :class="cn('pointer-events-none fixed left-0 top-0 z-50 size-full', props.class)">
+      <canvas id="fluid" ref="canvasRef" class="block h-screen w-screen" />
+    </div>
+  </template>
+
+  
+</body>
+
+</html>
